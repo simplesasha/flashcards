@@ -1,0 +1,10 @@
+ /*
+ *= require bootstrap.min.css
+ *= require_tree .
+ *= require_self
+ */
+
+#container > section {
+  margin: 48px auto;
+  width: 960px;
+}
