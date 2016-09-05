@@ -4,7 +4,15 @@
  *= require_self
  */
 
-#container > section {
+#container {
   margin: 48px auto;
   width: 960px;
+}
+
+.col-md-4 {
+	width: 23%;
+	background-color: #F2F2F2;
+	text-align: center;
+	margin: 5px;
+	font-size: 22px;
 }
