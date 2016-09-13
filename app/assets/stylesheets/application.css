@@ -16,3 +16,11 @@
 	margin: 5px;
 	font-size: 22px;
 }
+
+.col-md-4 > p {
+	font-size: 14px;
+}
+
+.form {
+	text-align: center;
+}

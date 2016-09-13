@@ -11,7 +11,8 @@
 			<div class="col-md-4"> 
 				<%= card.original_text %> <br> 
 				<%= card.translated_text %> <br>
-				<%= card.review_date.strftime('%d/%m/%Y') %>
+				<%= card.review_date.strftime('%d/%m/%Y') %> <br>
+				<p><%= link_to 'Редактировать', edit_card_path(card) %> | <%= link_to 'Удалить', card_path(card), method: :delete %></p>
 			</div>
 		<% end %>
 	</section>
