@@ -4,14 +4,14 @@ inherit_from: .rubocop_todo.yml
 
 AllCops:
   Exclude:
+    - 'db/schema.rb'
+    - 'app/assets/*'	
     - 'vendor/**/*'
-    - 'spec/fixtures/**/*'
     - 'tmp/**/*'
-  TargetRubyVersion: 1.9
 
-Style/Encoding:
-  EnforcedStyle: always
-  Enabled: true
-
-Style/FrozenStringLiteralComment:
-  EnforcedStyle: always
+StringLiterals:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Style/Tab:
+  Enabled: false

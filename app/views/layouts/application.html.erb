@@ -2,6 +2,7 @@
 <head>
 	<%= stylesheet_link_tag "application" %>
 	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 	<title>Флэшкарточкер</title>
 </head>
 
@@ -14,7 +15,7 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li><%= link_to 'Все карточки', cards_path %></li>
-				<li><a href="#">Добавить карточку</a></li>
+				<li><%= link_to 'Добавить карточку', new_card_path %></li>
 			</ul>
 		</div>
 	</nav>
