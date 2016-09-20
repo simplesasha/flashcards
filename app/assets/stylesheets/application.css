@@ -15,6 +15,7 @@
 	text-align: center;
 	margin: 5px;
 	font-size: 22px;
+    border-collapse: collapse;
 }
 
 .col-md-4 > p {
