@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'rubygems'
+require 'nokogiri'
+require 'open-uri'
+
+
+link = Nokogiri::HTML(open("http://www.languagedaily.com/learn-german/vocabulary/common-german-words"))
+linkarray = Array.new
+link.xpath(".//div[2]/div/div[1]/ul/li/a/@href").each do |links|
+  linkarray << links.text
+end
+
+linkarray.each do |link|
+  vocab = Nokogiri::HTML(open("http://www.languagedaily.com"+link))
+  vocab.xpath(".//*[contains(@class, 'bigLetter')]").each do |word|
+    Card.create(original_text: word.text, translated_text: word.xpath(".//following-sibling::td[1]").text)
+  end
+end
